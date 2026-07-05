@@ -151,7 +151,7 @@ export default function Emergency() {
             <p className="overline">What happens next</p>
             <ol className="mt-4 space-y-3 text-sm">
               {[
-                "Gemini 3 Flash parses patient, group, hospital, urgency",
+                "Gemma 4 parses patient, group, hospital, urgency",
                 "Smart matcher scores every donor: compat × distance × cooldown × history",
                 "AI drafts a warm outreach message in the patient's language",
                 "Top-5 donors receive instant in-app notifications",

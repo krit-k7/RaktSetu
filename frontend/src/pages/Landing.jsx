@@ -118,22 +118,22 @@ export default function Landing() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-[color:var(--bg-secondary)] border-t border-[color:var(--border-default)]">
         <div
-          className="relative bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1624533358643-7336036c9482?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHJlZCUyMHB1bHNlJTIwZGFya3xlbnwwfHx8fDE3ODIzMjEwMDR8MA&ixlib=rb-4.1.0&q=85')" }}>
-          <div className="absolute inset-0 bg-white/88"/>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-            <p className="overline">Emergency AI Ready</p>
-            <h2 className="h-section mt-3 max-w-3xl mx-auto">&ldquo;Mere father ke liye Kolkata mein urgent B+ blood chahiye.&rdquo;</h2>
-            <p className="mt-4 text-[color:var(--text-secondary)] max-w-2xl mx-auto">
-              Say it in your language. Watch the AI parse it, match verified donors, and dispatch outreach — before the next minute passes.
-            </p>
-            <div className="mt-8 inline-flex">
-              <Link to="/emergency" className="btn-urgent">
-                <Droplet className="w-4 h-4" fill="currentColor"/> Start Emergency Request
-              </Link>
-            </div>
+          className="absolute inset-0 bg-cover bg-center opacity-[0.08]"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1624533358643-7336036c9482?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHJlZCUyMHB1bHNlJTIwZGFya3xlbnwwfHx8fDE3ODIzMjEwMDR8MA&ixlib=rb-4.1.0&q=85')" }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+          <p className="overline">Emergency AI Ready</p>
+          <h2 className="h-section mt-3 max-w-3xl mx-auto text-[color:var(--text-primary)]">&ldquo;Mere father ke liye Kolkata mein urgent B+ blood chahiye.&rdquo;</h2>
+          <p className="mt-4 text-[color:var(--text-secondary)] max-w-2xl mx-auto">
+            Say it in your language. Watch the AI parse it, match verified donors, and dispatch outreach &mdash; before the next minute passes.
+          </p>
+          <div className="mt-8 inline-flex">
+            <Link to="/emergency" className="btn-urgent">
+              <Droplet className="w-4 h-4" fill="currentColor"/> Start Emergency Request
+            </Link>
           </div>
         </div>
       </section>
@@ -188,7 +188,7 @@ function HeroCard() {
       </div>
 
       <div className="p-4 bg-[color:var(--bg-secondary)] text-xs text-[color:var(--text-tertiary)] font-mono flex items-center gap-2">
-        <Sparkles className="w-3.5 h-3.5 text-[color:var(--brand)]"/> Gemini 3 Flash · Scored 15 donors in 340 ms
+        <Sparkles className="w-3.5 h-3.5 text-[color:var(--brand)]"/> Gemma 4 · Scored 15 donors in 340 ms
       </div>
     </div>
   );

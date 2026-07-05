@@ -2,14 +2,14 @@ import { Cpu, Layers, Database, MessageSquareText, ScanEye, Sparkles, GitBranch,
 
 const LAYERS = [
   { icon: MessageSquareText, name: "Conversation Layer",  detail: "React chat UI · SSE streaming · language auto-detect · session persistence in MongoDB." },
-  { icon: Cpu,               name: "Gemini 3 Flash Core", detail: "Multilingual reasoning (Hindi / Bengali / English), medical vision, request-message drafting, camp copywriting." },
+  { icon: Cpu,               name: "Gemma 4 Core", detail: "Multilingual reasoning (Hindi / Bengali / English), medical vision, request-message drafting, camp copywriting." },
   { icon: ScanEye,           name: "Document Vision",     detail: "Base64 image → Gemini vision → strict JSON extraction (blood group, units, hospital, urgency, doctor)." },
   { icon: GitBranch,         name: "Smart Matcher",       detail: "Compat matrix × Haversine × cooldown (90d) × response history × urgency boost → weighted match score." },
   { icon: Server,            name: "FastAPI Backend",     detail: "REST + Server-Sent-Events. Routes: /chat, /document/analyze, /requests/:id/matches, /camps/:id/awareness." },
   { icon: Database,          name: "MongoDB Store",       detail: "Collections: donors, blood_banks, requests, notifications, camps, chat_messages, documents." },
 ];
 
-const CODE_HINT = `# Gemini 3 Flash via Emergent LLM Universal Key
+const CODE_HINT = `# Gemma 4 via Emergent LLM Universal Key
 chat = LlmChat(
     api_key=EMERGENT_LLM_KEY,
     session_id=session_id,
@@ -45,7 +45,7 @@ export default function Architecture() {
         <p className="overline">Proof of Work</p>
         <h1 className="h-display mt-4">Inside the RaktaSetu.AI intelligence stack.</h1>
         <p className="mt-5 text-[color:var(--text-secondary)]">
-          A dense, transparent look at how Gemini 3 Flash — the multilingual, multimodal reasoning core — is composed with a
+          A dense, transparent look at how Gemma 4 &mdash; the multilingual, multimodal reasoning core &mdash; is composed with a
           purpose-built matching algorithm and an FastAPI/MongoDB backbone to save minutes when minutes matter.
         </p>
       </div>
@@ -63,7 +63,7 @@ export default function Architecture() {
       </div>
 
       <div className="mt-16 grid lg:grid-cols-2 gap-6">
-        <CodeCard title="Multilingual Chat · Gemini 3 Flash" body={CODE_HINT}/>
+        <CodeCard title="Multilingual Chat · Gemma 4" body={CODE_HINT}/>
         <CodeCard title="Medical Document Vision" body={VISION_HINT}/>
       </div>
 
@@ -83,7 +83,7 @@ export default function Architecture() {
       <div className="mt-16 card-flat relative overflow-hidden">
         <div className="flex items-center gap-2">
           <Sparkles className="w-5 h-5 text-[color:var(--brand)]"/>
-          <p className="overline">How Gemini 3 Flash is used</p>
+          <p className="overline">How Gemma 4 is used</p>
         </div>
         <ul className="mt-4 grid md:grid-cols-2 gap-3 text-sm text-[color:var(--text-secondary)]">
           <li className="p-4 rounded-lg bg-[color:var(--bg-secondary)]">

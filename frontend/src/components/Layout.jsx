@@ -112,7 +112,7 @@ export default function Layout({ children }) {
             <p className="overline mb-3">Proof of Work</p>
             <ul className="space-y-2 text-sm text-[color:var(--text-secondary)]">
               <li><Link to="/architecture">Architecture</Link></li>
-              <li>Gemini 3 Flash · Multilingual + Vision</li>
+              <li>Gemma 4 · Multilingual + Vision</li>
               <li className="font-mono text-xs text-[color:var(--text-tertiary)]">© {new Date().getFullYear()} RaktaSetu.AI</li>
             </ul>
           </div>

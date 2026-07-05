@@ -44,7 +44,7 @@ export default function DocumentAnalyzer() {
         <p className="overline">Medical Document Vision</p>
         <h1 className="h-section mt-2">Upload a prescription. Extract in seconds.</h1>
         <p className="mt-3 text-[color:var(--text-secondary)] max-w-2xl">
-          Gemini 3 Flash reads doctor prescriptions, blood-requirement slips, or hospital forms and returns structured fields — blood group, units, hospital, urgency, doctor.
+          Gemma 4 reads doctor prescriptions, blood-requirement slips, or hospital forms and returns structured fields &mdash; blood group, units, hospital, urgency, doctor.
         </p>
       </div>
 
@@ -80,7 +80,7 @@ export default function DocumentAnalyzer() {
             disabled={!file || busy}
             data-testid={TEST_IDS.doc.uploadBtn}
             className="btn-urgent w-full mt-5 disabled:opacity-50">
-            {busy ? <><Loader2 className="w-4 h-4 animate-spin"/> Analyzing with Gemini Vision…</> : <><FileScan className="w-4 h-4"/> Extract Fields</>}
+            {busy ? <><Loader2 className="w-4 h-4 animate-spin"/> Analyzing with Gemma 4 Vision…</> : <><FileScan className="w-4 h-4"/> Extract Fields</>}
           </button>
         </div>
 
