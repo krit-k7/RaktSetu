@@ -3,7 +3,7 @@ import { Cpu, Layers, Database, MessageSquareText, ScanEye, Sparkles, GitBranch,
 const LAYERS = [
   { icon: MessageSquareText, name: "Conversation Layer",  detail: "React chat UI · SSE streaming · language auto-detect · session persistence in MongoDB." },
   { icon: Cpu,               name: "Gemma 4 Core", detail: "Multilingual reasoning (Hindi / Bengali / English), medical vision, request-message drafting, camp copywriting." },
-  { icon: ScanEye,           name: "Document Vision",     detail: "Base64 image → Gemini vision → strict JSON extraction (blood group, units, hospital, urgency, doctor)." },
+  { icon: ScanEye,           name: "Document Vision",     detail: "Base64 image → Gemma 4 vision → strict JSON extraction (blood group, units, hospital, urgency, doctor)." },
   { icon: GitBranch,         name: "Smart Matcher",       detail: "Compat matrix × Haversine × cooldown (90d) × response history × urgency boost → weighted match score." },
   { icon: Server,            name: "FastAPI Backend",     detail: "REST + Server-Sent-Events. Routes: /chat, /document/analyze, /requests/:id/matches, /camps/:id/awareness." },
   { icon: Database,          name: "MongoDB Store",       detail: "Collections: donors, blood_banks, requests, notifications, camps, chat_messages, documents." },
@@ -14,7 +14,7 @@ chat = LlmChat(
     api_key=EMERGENT_LLM_KEY,
     session_id=session_id,
     system_message=MULTILINGUAL_SYSTEM_PROMPT,
-).with_model("gemini", "gemini-3-flash-preview")
+).with_model("gemma", "gemma-4")
 
 async for ev in chat.stream_message(UserMessage(text=user_msg)):
     if isinstance(ev, TextDelta): yield ev.content
@@ -25,7 +25,7 @@ chat = LlmChat(
     api_key=EMERGENT_LLM_KEY,
     session_id=f"doc-{uuid4()}",
     system_message=DOC_EXTRACTION_PROMPT,   # returns strict JSON
-).with_model("gemini", "gemini-3-flash-preview")
+).with_model("gemma", "gemma-4")
 
 msg = UserMessage(
     text="Extract structured blood-request fields. JSON only.",
